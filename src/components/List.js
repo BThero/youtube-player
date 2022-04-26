@@ -1,18 +1,16 @@
 import React from 'react';
 import { UL, LI, Div } from './List.styled';
+import { Link } from 'react-router-dom';
 
 const List = ({ data, onSelect }) => {
 	return (
 		<UL>
 			{data.map((item) => (
-				<LI
-					onClick={(e) => {
-						e.preventDefault();
-						onSelect(item.id.videoId);
-					}}
-				>
+				<LI>
 					<header>
-						<h2>{item.title}</h2>
+						<Link to={`/${item.id.videoId}`}>
+							<h2>{item.title}</h2>
+						</Link>
 					</header>
 					<Div>
 						<span>Duration: {item.duration_raw}</span>
