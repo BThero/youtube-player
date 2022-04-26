@@ -11,17 +11,17 @@ const Video = () => {
 
 	return (
 		<div>
-			<Player id={id} />
-			{error && <p>Some error</p>}
+			{error && <p>Description fetching failed :(</p>}
 			{data && (
 				<Wrapper>
 					<h2>
-						"{data.title}" by {data.owner}
+						{data.title} by {data.owner}
 					</h2>
 					<p>{data.description}</p>
 					<p>Published at {data.datePublished}</p>
 				</Wrapper>
 			)}
+			<Player id={id} />
 		</div>
 	);
 };

@@ -4,17 +4,16 @@ const UL = styled.ul`
 	display: flex;
 	flex-direction: column;
 	list-style-type: none;
-	align-items: center;
+	align-items: stretch;
 `;
 
 const LI = styled.li`
-	border: 1px solid white;
+	border: 2px solid ${({ active }) => (active ? 'magenta' : 'white')};
 	border-radius: 1rem;
 	padding: 0.5rem;
 
 	&:hover {
 		border-color: #555;
-		cursor: pointer;
 	}
 `;
 
